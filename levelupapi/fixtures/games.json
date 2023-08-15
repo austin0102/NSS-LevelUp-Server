@@ -1,0 +1,24 @@
+[
+    {
+        "model": "levelupapi.game",
+        "pk": 1,
+        "fields": {
+            "game_title": "Trouble",
+            "creator": 1,
+            "game_type": 1,
+            "number_of_players": 4,
+            "skill_level": "Easy"
+        }
+    },
+    {
+        "model": "levelupapi.game",
+        "pk": 2,
+        "fields": {
+            "game_title": "Sorry",
+            "creator": 1,
+            "game_type": 1,
+            "number_of_players": 4,
+            "skill_level": "Easy"
+        }
+    }
+]

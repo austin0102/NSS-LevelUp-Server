@@ -1,0 +1,24 @@
+[
+    {
+        "model": "levelupapi.event",
+        "pk": 1,
+        "fields": {
+            "event_title": "Trouble at Austin's",
+            "date_time": "2023-08-15 15:00:00",
+            "organizer": 1,
+            "game": 1,
+            "location": "Austin's House"
+        }
+    },
+    {
+        "model": "levelupapi.event",
+        "pk": 2,
+        "fields": {
+            "event_title": "Austin isn't Sorry",
+            "date_time": "2023-08-16 15:00:00",
+            "organizer": 1,
+            "game": 2,
+            "location": "Austin's House"
+        }
+    }
+]
