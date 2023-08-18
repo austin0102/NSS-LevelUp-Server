@@ -15,8 +15,11 @@ class GameView(ViewSet):
         Returns:
             Response -- JSON serialized game
         """
-        game_type = Game.objects.get(pk=pk)
-        serializer = GameSerializer(game_type)
+        # gets game instance from primary key
+        game = Game.objects.get(pk=pk)
+        # serialize into json
+        serializer = GameSerializer(game)
+        
         return Response(serializer.data)
 
     def list(self, request):
@@ -25,8 +28,8 @@ class GameView(ViewSet):
         Returns:
             Response -- JSON serialized list of games
         """
-        game = Game.objects.all()
-        serializer = GameSerializer(game, many=True)
+        games = Game.objects.all()
+        serializer = GameSerializer(games, many=True)
         return Response(serializer.data)
     
     def create(self, request):
@@ -76,7 +79,8 @@ class GameView(ViewSet):
         return Response(None, status=status.HTTP_204_NO_CONTENT)
             
 
-        
+    # these serializer classes define how your Django 
+    # models should be serialized into JSON for use in your API
 
 class GameCreatorSerializer(serializers.ModelSerializer):
     class Meta:
